@@ -44,7 +44,7 @@ with open(csvpath, newline='') as csvfile:
             greatest_increase = int(row[1])
             greatest_increase_month = row[0]
             
-    
+            
         if int(row[1]) < greatest_decrease:
             greatest_decrease = int(row[1])
             greatest_decrease_month = row[0]  
@@ -64,10 +64,7 @@ print(f"Greatest Increase in Profits: {greatest_increase_month} (${highest})")
 print(f"Greatest Decrease in Profits: {greatest_decrease_month} (${lowest})")
 
 # Specify the file to write to
-output_file = os.path.join('.', 'budget_data')
-
-with open("results.txt","w+") as txt_file:
-
+with open("results.txt","w") as txt_file:
     txt_file.write(f"Financial Analysis\n")
     txt_file.write(f"---------------------------\n")
     txt_file.write(f"Total Months: {total_months}\n")

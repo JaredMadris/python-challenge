@@ -61,10 +61,7 @@ print(f"Winner: {winner_name}")
 print(f"---------------------------")
 
 # Specify the file to write to
-output_file = os.path.join('.', 'election_data')
-
-with open("results.txt","w+") as txt_file:
-
+with open("results.txt","w") as txt_file:
     txt_file.write(f"Election Results\n")
     txt_file.write(f"---------------------------\n")
     txt_file.write(f"Total Votes: {total_votes}\n")
